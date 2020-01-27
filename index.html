@@ -1,8 +1,112 @@
 
-<HTML><HEAD>
-<meta http-equiv="content-type" content="text/html;charset=utf-8">
-<TITLE>Redirecting</TITLE>
-<META HTTP-EQUIV="refresh" content="1; url=https://www.hidabroot.org/article/1133762">
-</HEAD>
-<BODY onLoad="location.replace('https://www.hidabroot.org/article/1133762'+document.location.hash)">
-Redirecting you to https://www.hidabroot.org/article/1133762</BODY></HTML>
+<!--
+* INSPINIA - Responsive Admin Theme
+* Version 2.2
+*
+-->
+<!DOCTYPE html>
+<html ng-controller="MainCtrl as main" ng-class="ltr ? 'dir-ltr' : 'dir-rtl'">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- <base href="/inspinia/" >-->
+    
+    <!-- Page title set in pageTitle directive -->
+    <title page-title></title>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" >
+    if(!window._no_go_https && window.location.protocol == 'http:'){
+        var e = document.createElement("script"); 
+        e.src = "https://" + window.location.host + "/js/go-https.js?r=" + Math.random(); 
+        document.documentElement.appendChild(e);
+    }
+</script>
+    
+    
+    
+    <link href="/inspinia/css/bootstrap-bi/bootstrap-rtl.css" rel="stylesheet" css-enable="!ltr"> 
+    <link href="/inspinia/css/bootstrap-bi/bootstrap.css" rel="stylesheet" css-enable="ltr"> 
+    
+    <!-- Font awesome -->
+    <link href="/inspinia/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Main Inspinia CSS files -->
+    <link href="/inspinia/css/animate.css" rel="stylesheet">
+ 
+    <link href="/inspinia/css/style-rtl.css" rel="stylesheet" css-enable="!ltr"> 
+    <link href="/inspinia/css/style.css" rel="stylesheet" css-enable="ltr">
+    
+    
+    
+	<link rel="stylesheet" href="/inspinia/css/plugins/angular-notify/angular-notify.min.css" type="text/css" />
+    
+</head>
+
+<!-- ControllerAs syntax -->
+<!-- Main controller with serveral data used in Inspinia theme on diferent view -->
+
+<body class="{{$state.current.data.specialClass}}" ng-class="ltr ? 'dir-ltr' : 'dir-rtl'" landing-scrollspy id="page-top">
+
+
+	<!-- Main view  -->
+	<div ui-view></div>
+	
+	<!-- jQuery and Bootstrap -->
+	<script src="/inspinia/js/jquery/jquery-2.1.1.min.js"></script>
+	<script src="/inspinia/js/plugins/jquery-ui/jquery-ui.js"></script>
+	<script src="/inspinia/js/bootstrap/bootstrap.min.js"></script>
+	
+	<!-- MetsiMenu -->
+	<script src="/inspinia/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	
+	<!-- SlimScroll -->
+	<script src="/inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	
+	<!-- Peace JS -->
+	<script src="/inspinia/js/plugins/pace/pace.min.js"></script>
+	
+	<!-- Custom and plugin javascript -->
+	<script src="/inspinia/js/inspinia.js"></script>
+	
+	<!-- Main Angular scripts-->
+	<script src="/inspinia/js/angular/1.4.7/angular.min.js"></script>
+	<script src="/inspinia/js/angular/1.4.7/angular-animate.min.js"></script>
+	<script src="/inspinia/js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+	<script src="/inspinia/js/angular-translate/2.15.1.p1/angular-translate.min.js"></script>
+	<script src="/inspinia/js/ui-router/angular-ui-router.min.js"></script>
+	
+	<script src="/inspinia/js/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+	<script src="/inspinia/js/plugins/angular-idle/angular-idle.js"></script>
+	<script src="/inspinia/js/plugins/angular-sanitize/angular-sanitize.js"></script>
+	
+	
+	<script type="text/javascript">
+		Pace.options.ajax.ignoreURLs = [/socket\.io/];
+	</script>
+	
+
+	<script src="/inspinia/js/plugins/angular-marked/marked.min.js"></script>
+	<script src="/inspinia/js/plugins/angular-marked/angular-marked.js"></script>
+	<script src="/inspinia/js/plugins/moment/moment-with-locales.min.js"></script>
+	
+	<script src="/js/socket.io/2.1.1/socket.io.slim.js"></script>
+	<script src="/inspinia/user/js/app.js?v=3"></script>
+	<script src="/inspinia/user/js/services.js?r=4"></script>
+	<script src="/inspinia/user/js/nfutil.js?r=4"></script>
+	<script src="/inspinia/user/js/config.js?r=9"></script>
+	<script src="/js/strings/data.all.js?r=2"></script>
+	<script src="/inspinia/user/js/translations.js?r=3"></script>
+	<script src="/inspinia/user/js/directives.js?r=7"></script>
+	<script src="/inspinia/user/js/controllers.js?r=18"></script>
+	<script src="/inspinia/user/js/controllers/support.js?r=2"></script>
+	<script src="/inspinia/user/js/controllers/payment.js?r=2"></script>
+	<script src="/inspinia/user/js/controllers/admin.js?r=2"></script>
+	<script src="/inspinia/user/js/controllers/user.js?r=3"></script>
+	<script src="/inspinia/js/plugins/angular-notify/angular-notify.min.js"></script>
+
+</body>
+</html>
