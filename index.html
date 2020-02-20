@@ -1,34 +1,42 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html dir="rtl" lang="he" class="loading"
+    >
 <head>
+  <meta charset="utf-8">
+  <base href="chrome://downloads">
+  <title>הורדות</title>
+  <link rel="stylesheet" href="chrome://resources/css/md_colors.css">
+  <style>
+    html {
+      background: var(--md-background-color);
+      /* Remove 300ms delay for 'click' event, when using touch interface. */
+      touch-action: manipulation;
+    }
 
-<a href="http://www.webmasters.org.il">
-  <img src="https://webmaster.org.il/images/logo.gif" 
-       alt="אתר וובמאסטר" />
-</a>
+    html.loading::before {
+      background-color: var(--md-toolbar-color);
+      border-bottom: var(--md-toolbar-border);
+      box-sizing: border-box;
+      content: '';
+      display: block;
+      height: var(--md-toolbar-height);
+    }
 
+    html:not(.loading),
+    body {
+      height: 100%;
+    }
 
-    <title>קישורים פנימיים</title>
+    body {
+      display: flex;
+      margin: 0;
+    }
+  </style>
 </head>
-<body dir="rtl">
-  <h1>מאמר מעניין</h1>
-  <p>למאמר מספר חלקים:</p>
- 
-  <h2>מבוא</h2>
-  <p>זהו פרק המבוא בו אני מביא מעט רקע על הנושא</p>
- 
-  <h2>פרק 1</h2>
-  <p>זהו גוף המאמר בו אני מספר סיפור מעניין מאד!</p>
- 
-  <h2>סיכום</h2>
-  <p>זהו פרק הסיכום בו אני מגיע למסקנות חשובות</p>
+<body>
+  <downloads-manager></downloads-manager>
+  <link rel="stylesheet" href="chrome://resources/css/text_defaults_md.css">
+  <script type="module" src="chrome://downloads/downloads.js"></script>
 </body>
 </html>
-<h2 id="intro">מבוא</h2>
-<p>זהו פרק המבוא בו אני מביא מעט רקע על הנושא</p>
- 
-<h2 id="chapter1">פרק 1</h2>
-<p>זהו גוף המאמר בו אני מספר סיפור מעניין מאד!</p>
- 
-<h2 id="summary">סיכום</h2>
-<p>זהו פרק הסיכום בו אני מגיע למסקנות חשובות</p>
